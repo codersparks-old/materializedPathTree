@@ -1,7 +1,5 @@
 package uk.codersparks.communitytreematerializedpath.model;
 
-import lombok.Data;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -10,15 +8,19 @@ import java.util.stream.Collectors;
 public class CommunityTreeNode {
 
     private final String name;
+    private final String path;
     private final List<CommunityTreeNode> children = new ArrayList<>();
 
-    public CommunityTreeNode(String name) {
+    public CommunityTreeNode(String name, String path) {
         this.name = name;
+        this.path = path;
     }
 
     public String getName() {
         return name;
     }
+
+    public String getPath() { return path; }
 
     public List<CommunityTreeNode> getChildren() {
         return children;

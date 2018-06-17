@@ -15,4 +15,9 @@ public class Community {
     @Id
     private String name;
 
-    private String path = "";}
+    private String path = "";
+
+    public String getIdentityPath() {
+        return path + name + PATH_SEPERATOR;
+    }
+}
